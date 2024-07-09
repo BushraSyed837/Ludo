@@ -6,7 +6,6 @@
 #include<graphics.h>
 #include<iostream>
 #include<cstdio>
->>>>>>> 06a33ed5d2bd179b37aab976b80e9f2ea3f5cd0b
 using namespace std;
 
 struct goti
