@@ -8,7 +8,7 @@
 #include<cstdio>
 using namespace std;
 
-struct goti
+struct token
 {
     int pos;
       int  status;
@@ -17,7 +17,7 @@ struct goti
 };
 struct user
 {
-    struct goti g[4];
+    struct token g[4];
     int def;
      int color;
      int win;
@@ -451,10 +451,10 @@ void play()
            num = (rand() % 6 ) +1;
            printf(tDICE  %d ,num);
            printf(ntTO MOVE  (0,1,2,3)  );
-           scanf(%d,&run);                      which goti to move
+           scanf(%d,&run);                     // which token to move
            if( student[i].g[run].status==0)
              {
-               coutit already reached home endl;
+               cout<<it already reached home endl;
 =======
      //gameplaye and movement
         int i=0;
@@ -474,7 +474,7 @@ void play()
            num = (rand() % 6 ) +1;
            printf("\tDICE : %d :",num);
            printf("\n\tTO MOVE : (0,1,2,3)  ::");
-           scanf("%d",&run);                     // which goti to move
+           scanf("%d",&run);                     // which token to move
            if( student[i].g[run].status==0)
              {
                cout<<"it already reached home "<<endl;
@@ -522,7 +522,7 @@ void play()
                                 break;
                         }
                         student[l].g[m].pos =-1;    intial stage set
-                        printf(goti number %d %d,m,l);
+                        printf(token number %d %d,m,l);
                         flood_fill(ary[0][first+num],ary[1][first+num],0,getcl);
                     }
 
@@ -539,7 +539,7 @@ void play()
                                 break;
                         }
                         student[l].g[m].pos =-1;  //  intial stage set
-                        printf("goti number %d %d",m,l);
+                        printf("token number %d %d",m,l);
                         flood_fill(ary[0][first+num],ary[1][first+num],0,getcl);
                     }
 
@@ -589,7 +589,7 @@ void play()
                               { if( student[l].g[m].pos == first+num)
                                 break;
                               }
-                             printf(goti number %d %d,m,l);
+                             printf(token number %d %d,m,l);
                       student[l].g[m].pos =-1;
                       flood_fill(ary[0][first+num],ary[1][first+num],0,getcl);
                     }
@@ -612,7 +612,7 @@ void play()
                               { if( student[l].g[m].pos == first+num)
                                 break;
                               }
-                          //   printf("goti number %d %d",m,l);
+                          //   printf("token number %d %d",m,l);
                       student[l].g[m].pos =-1;
                       flood_fill(ary[0][first+num],ary[1][first+num],0,getcl);
                     }
